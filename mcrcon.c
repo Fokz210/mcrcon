@@ -659,6 +659,7 @@ int run_terminal_mode(int sock)
 
 	while (global_connection_alive) {
 		putchar('>');
+		putchar(' ');
 
 		int len = get_line(command, DATA_BUFFSIZE);
 		if (len < 1) continue; 
